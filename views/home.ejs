@@ -1,0 +1,167 @@
+<%- include('partials/header.ejs') %>
+
+<main class="container mt-5">
+    <!-- Product Carousel -->
+    <div id="productCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#productCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#productCarousel" data-slide-to="1"></li>
+            <li data-target="#productCarousel" data-slide-to="2"></li>
+            <li data-target="#productCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/assets/images/product1.png" class="d-block w-100" alt="Brownie Time">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div>
+                            <h2>Brownie Time</h2>
+                            <p>The Famous Brownies on Tiktok is now on sale! Get yourself now before the stocks run out!</p>
+                            <a href="/shop" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/assets/images/product2.png" class="d-block w-100" alt="Birthday Number Cake">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div>
+                            <h2>Birthday Number Cake</h2>
+                            <p>Let us help you surprise your love ones on their special day. Avail our eye popping birthday number cakes. You can choose from different design here.</p>
+                            <a href="/shop" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/assets/images/product3.png" class="d-block w-100" alt="Mini Cupcakes">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div>
+                            <h2>Mini Cupcakes</h2>
+                            <p>Who wouldn't love these cute sweet desserts at a party, right? Pre-order now for your next birthday party!</p>
+                            <a href="/shop" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/assets/images/product4.png" class="d-block w-100" alt="Messy Cookies">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div>
+                            <h2>Messy Cookies</h2>
+                            <p>The new crowd favorite is in new packaging for a better customer experience. Indulge yourself with these chocolatey goods, also available in caramel flavor!</p>
+                            <a href="/shop" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Customer Feedbacks Heading -->
+    <h1 class="text-center" id="feedback-title">Customer Feedbacks</h1>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials mt-5">
+        <div id="testimonialsCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Carousel controls -->
+            <a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+            <!-- Testimonials items -->
+            <div class="carousel-inner">
+                <!-- First Set of Testimonials -->
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-around">
+                        <!-- Testimonial 1 -->
+                        <div class="card testimonial-card" id="testimonial1" style="width: 18rem;">
+                            <img src="/assets/images/testimonial1.jpeg" class="card-img-top rounded-circle mx-auto mt-3" alt="Joyce" style="width: 100px; height: 100px;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title font-weight-bold">Joyce</h5>
+                                <p class="card-text">The best brownies I have ever tasted 😊🍫</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="card testimonial-card" id="testimonial2" style="width: 18rem;">
+                            <img src="/assets/images/testimonial2.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Joyce" style="width: 100px; height: 100px;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title font-weight-bold">Mika</h5>
+                                <p class="card-text">Absolutely loved the cakes! Will order again. 🎂🥳</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="card testimonial-card" id="testimonial3" style="width: 18rem;">
+                            <img src="/assets/images/testimonial3.jpeg" class="card-img-top rounded-circle mx-auto mt-3" alt="Joyce" style="width: 100px; height: 100px;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title font-weight-bold">Jane</h5>
+                                <p class="card-text">Your cupcakes are a hit at every party! 🧁🌟</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Set of Testimonials -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-around">
+                        <!-- Testimonial 4 -->
+                        <div class="card testimonial-card" id="testimonial14 style="width: 18rem;">
+                            <img src="/assets/images/testimonial4.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Joyce" style="width: 100px; height: 100px;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title font-weight-bold">Pam</h5>
+                                <p class="card-text">I'm in love with your chocolate chip cookies! 🍪❤️</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 5 -->
+                        <div class="card testimonial-card" id="testimonial5" style="width: 18rem;">
+                            <img src="/assets/images/testimonial5.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Joyce" style="width: 100px; height: 100px;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title font-weight-bold">Lay</h5>
+                                <p class="card-text">The freshness and quality of your pastries is unmatched. 🥐✨</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 6 -->
+                        <div class="card testimonial-card" id="testimonial6" style="width: 18rem;">
+                            <img src="/assets/images/testimonial6.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Joyce" style="width: 100px; height: 100px;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title font-weight-bold">Christine</h5>
+                                <p class="card-text">Every bite was a delight, truly heavenly! 😇🍰</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<%- include('partials/footer.ejs') %>

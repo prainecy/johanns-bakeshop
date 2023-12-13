@@ -1,0 +1,50 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container mt-3">
+    <!-- Centered Navigation Links with Icons -->
+    <nav class="menu-links text-center" id="categeorylinks">
+        <a id="link-Cakes" href="#Cakes" onclick="showCategory('Cakes')" class="category-link active"><i class="fas fa-birthday-cake category-icon"></i> <span class="category-text">Cakes</span></a>
+        <a id="link-Brownies" href="#Brownies" onclick="showCategory('Brownies')" class="category-link"><i class="fas fa-cookie-bite category-icon"></i> <span class="category-text">Brownies</span></a>
+        <a id="link-Cookies" href="#Cookies" onclick="showCategory('Cookies')" class="category-link"><i class="fas fa-cookie category-icon"></i> <span class="category-text">Cookies</span></a>
+        <a id="link-Cupcakes" href="#Cupcakes" onclick="showCategory('Cupcakes')" class="category-link"><i class="fas fa-cupcake category-icon"></i> <span class="category-text">Cupcakes</span></a>
+    </nav>
+
+    <!-- Product Sections -->
+    <% ['Cakes', 'Brownies', 'Cookies', 'Cupcakes'].forEach(category => { %>
+        <section id="<%= category %>" class="product-section <%= category === 'Cakes' ? 'active' : '' %>">
+            <div class="row">
+                <% products[category].forEach(product => { %>
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="product-card card h-100" onclick="showImageModal('/assets/images/<%= product.Name.toLowerCase() %>.jpg')">
+                            <!-- Image container with consistent aspect ratio -->
+                            <div class="image-container">
+                                <img src="/assets/images/<%= product.Name.toLowerCase() %>.jpg" class="card-img-top" alt="<%= product.Name %>">
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                    <h5 class="card-title text-center"><%= product.Name %></h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+    <% }); %>
+</div>
+
+<!-- Modal Placeholder -->
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" class="img-fluid" alt="Product Image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer.ejs') %>

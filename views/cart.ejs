@@ -1,0 +1,83 @@
+<%- include('partials/header.ejs') %>
+
+<main class="container mt-3">
+    <!-- Cart Items -->
+    <div class="row mb-4" id="cartItems">
+        <% if (cart && cart.length > 0) { %>
+            <% cart.forEach(item => { %>
+                <div class="col-12 mb-3" id="cart-row-items">
+                    <div class="row align-items-center">
+                        <!-- Product Image -->
+                        <div class="col" id="cart-image-column">
+                            <img src="/assets/images/<%= item.product.Name.toLowerCase() %>.jpg" class="img-fluid" alt="<%= item.product.Name %>">
+                        </div>
+                        <!-- Product Name -->
+                        <div class="col" id="cart-product-name">
+                            <h5><%= item.product.Name %></h5>
+                        </div>
+                        <!-- Quantity Selector -->
+                        <div class="col" id="cart-q-selector">
+                            <button id="quantity-selector-minus" class="btn btn-secondary" onclick="updateQuantity('<%= item.product._id %>', -1)">-</button>
+                            <span id="quantity_<%= item.product._id %>"><%= item.quantity %></span>
+                            <button id="quantity-selector-plus" class="btn btn-secondary" onclick="updateQuantity('<%= item.product._id %>', 1)">+</button>
+                        </div>
+                        <!-- Price -->
+                        <div class="col" id="cart-item-price">
+                            <p>$<%= (item.product.Cost * item.quantity).toFixed(2) %></p>
+                        </div>
+                        <!-- Remove Button -->
+                        <div class="col" id="cart-remove-btn">
+                            <button class="button" onclick="removeFromCart('<%= item.product._id %>')">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+            <% } else { %>
+                <div class="container justify-content-center">
+                    <img src="/assets/images/emptycart.png" alt="Empty Cart" class="empty-cart-image">
+                    <p class="empty-cart-message">Your cart is empty.</p>
+                    <p class="empty-cart-message2">Add something to make me happy :)</p>
+                </div>
+            <% } %>
+            
+    </div>
+
+    <!-- Checkout and Summary -->
+    <div class="row mt-10" id="cart-buttons">
+        <div class="col-md-6 mb-3" id="cartbtn">
+            <button class="btn btn-primary" id="checkoutButton" onclick="proceedToCheckout()">Checkout</button>
+            <button class="btn btn-secondary" id="clearcartbtn" onclick="clearCart()">Clear Cart</button>
+        </div>
+        <div class="col-md-6" id="ordersummary">
+            <div id="order-summary" class="d-flex justify-content-between">
+                <p>Subtotal: <span id="subtotal">$<%= subtotal %></span></p>
+                <p>Tax: <span id="tax">$<%= tax %></span></p>
+                <p>Total: <span id="totalPrice">$<%= total %></span></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Checkout Confirmation Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Proceed to Checkout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Do you want to proceed with placing these orders?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" id="confirmCheckout">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</main>
+
+<%- include('partials/footer.ejs') %>

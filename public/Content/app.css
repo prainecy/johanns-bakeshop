@@ -1,0 +1,582 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  padding-top: 10%;
+}
+
+a {
+  color: rgb(243, 152, 199);
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: rgb(243, 152, 199); /* Pink background for primary buttons */
+  border: none; /* No border for primary buttons */
+}
+
+.btn-secondary {
+  border: none; /* No border for secondary buttons */
+}
+
+/* -------------------------------- Navbar Styles -------------------------------- */
+.navbar {
+  background-color: rgb(243, 152, 199) !important; /* Pink background for the navbar */
+  height: 15%;
+}
+
+/* Navbar Logo Styles */
+.navbar-brand {
+  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+  margin-left: 0; /* Left margin for the brand logo */
+  margin-right: 2%;
+}
+
+.navbar-brand img {
+  height: 8rem; /* Size of the logo */
+}
+
+/* Navbar Logo Hover Effect */
+.navbar-brand:hover {
+  transform: scale(1.1); /* Enlarge the logo on hover */
+}
+
+/* Navbar Link Styles */
+.navbar-nav .nav-link {
+  color: white !important; /* Color for nav links */
+  padding: 0.5rem 1rem; /* Padding for nav links */
+  white-space: nowrap;
+  font-size: 1.6rem; /* Font size for nav links */
+  transition: transform 0.3s ease; /* Transition for hover effects */
+}
+
+/* Navbar Link Hover Effect */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+  transform: scale(1.1); /* Enlarge the nav link on hover */
+}
+
+.navcontent-container {
+  margin-top: 2.5%;
+}
+
+.icon-container {
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+/* Icon Styles */
+.navbar-nav .nav-link i {
+  font-size: 1.5rem; /* Font size for icons */
+  color: white; /* Icon color */
+  transition: transform 0.3s ease; /* Transition for hover effects */
+}
+
+/* Icon Hover Effect */
+.navbar-nav .nav-link i:hover {
+  transform: scale(1.1); /* Enlarge the icon on hover */
+}
+
+/* Responsive Navbar Adjustments */
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+    justify-content: space-evenly; /* Evenly space navigation items */
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1.5rem; /* Space out the links more */
+    padding-right: 1.5rem;
+  }
+}
+
+/* -------------------------------- Footer Styles -------------------------------- */
+footer {
+  background-color: rgba(128, 128, 128, 0.066) !important; /* Light grey background */
+  color: #343a40; /* Text color */
+  padding-top: 20px; /* Top padding */
+}
+
+footer .column-title,
+footer p,
+footer li,
+footer a,
+footer a:hover {
+  color: #343a40; /* Text and link color */
+}
+
+footer h5 {
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: pink; /* Text color on hover */
+  text-decoration: underline; /* Underline text on hover */
+}
+
+/* Footer Copyright Styles */
+#copyright {
+  font-size: 0.9em;
+  padding-bottom: -2rem;
+}
+
+/* Footer Section Adjustments */
+#johanns-footer,
+#get2know-footer,
+#otherq-footer,
+#social-footer,
+#partners-footer {
+  margin-left: -1rem; /* Adjust margins for footer sections */
+}
+
+/* Footer Social Icons Styles */
+footer i {
+  color: #343a40; /* Icon color */
+}
+
+/* Social Icons Hover Effect */
+footer .social-icons a:hover i {
+  color: pink; /* Icon color on hover */
+}
+
+.social-icons {
+  padding-left: 0; /* Remove padding */
+  list-style: none; /* Remove list bullets */
+  margin-left: 0.5rem;
+}
+
+.social-icons li a {
+  font-size: 1.3rem; /* Icon size */
+  margin-right: 0.5rem; /* Space between icons */
+}
+
+/* -------------------------------- About Page Styles -------------------------------- */
+.about-title {
+  font-size: 2.5rem; /* Font size for the title */
+  color: #343a40; /* Title color */
+  margin-bottom: 1rem; /* Space below the title */
+}
+
+.about-description {
+  font-size: 1.2rem; /* Font size for the description */
+  color: #343a40; /* Description color */
+  line-height: 1.5; /* Line height */
+}
+
+.about-image {
+  max-width: 100%; /* Full width */
+  height: auto; /* Auto height */
+  border-radius: 0.5rem; /* Rounded corners */
+}
+
+/* Additional Text Styles */
+.origin-title {
+  font-size: 2rem; /* Font size for origin title */
+  color: #343a40; /* Color */
+  margin-top: 2rem; /* Top margin */
+}
+
+.origin-description {
+  font-size: 1.2rem; /* Font size for description */
+  color: #343a40; /* Color */
+}
+
+/* -------------------------------- Counter Section Styles -------------------------------- */
+.counter-section {
+  margin-top: 3rem; /* Top margin */
+}
+
+.counter {
+  font-size: 2.5rem; /* Font size for counter numbers */
+  color: #f38181; /* Color */
+}
+
+.counter-text {
+  margin-top: 1rem; /* Top margin */
+  font-size: 1.2rem; /* Font size */
+  text-align: center; /* Text alignment */
+}
+
+/* -------------------------------- Contact Page Styles -------------------------------- */
+#contact-title {
+  margin-bottom: 5rem !important; /* Bottom margin for contact title */
+}
+
+#contact-message1 {
+  margin-bottom: 1rem !important; /* Bottom margin */
+  font-size: 1.5rem; /* Font size */
+}
+
+#contact-message2 {
+  margin-bottom: 1.3rem !important; /* Bottom margin */
+  font-weight: bold; /* Bold font */
+  font-size: 1.3rem; /* Font size */
+}
+
+.about-content {
+  font-size: 1rem; /* Font size for about content */
+}
+
+#faqbtn a {
+  color: white !important;
+  text-decoration:none;
+}
+
+/* -------------------------------- Maintenance Page Styles -------------------------------- */
+#maintenance-content {
+  margin-top:1rem;
+  margin-bottom: 5rem;
+}
+
+#maintenance-content p {
+  margin-top:2rem;
+  font-size: 1.3rem;
+}
+
+#maintenance-image img {
+  max-width: auto; /* Full width for responsiveness */
+  height: auto; /* Auto height to maintain aspect ratio */
+  border-radius: 0.5rem; /* Optional: round corners of the image */
+  margin:10%;
+  margin-top:-3%;
+  margin-left:-5%
+}
+
+/* -------------------------------- Login Page-------------------------------- */
+
+.social-btn {
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  text-align: left;
+}
+
+.social-btn.facebook {
+  background-color: #1877F2;
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-btn.google {
+  background-color: #EA4335;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.social-btn i {
+  margin-right: 8px;
+}
+
+/* Divider with Text */
+.divider-with-text {
+  text-align: center;
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+
+#loginbtn{
+  margin-top: 2rem;
+}
+/* -------------------------------- Logout Modal Styles -------------------------------- */
+#logout-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+/* -------------------------------- Carousel Customization -------------------------------- */
+.carousel-inner .carousel-item {
+  height: 500px; /* Fixed height for consistency */
+  overflow: hidden; /* Prevents overflow of content */
+}
+
+.carousel-inner .carousel-item img {
+  width: 100%; /* Full width of the column */
+  height: 100%; /* Full height of the item */
+  object-fit: cover; /* Ensures the image covers the area without being stretched */
+  transition: transform 0.5s ease; /* Smooth transition for the image */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: pink; /* Pink background for carousel controls */
+}
+
+.carousel-indicators li {
+  background-color: pink; /* Pink indicators */
+}
+
+/* Carousel Text and Button Styling */
+.carousel-item .col-md-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item h2 {
+  color: #343a40; /* Adjust the color as needed */
+  margin-bottom: 15px;
+}
+
+.carousel-item p {
+  margin-bottom: 20px;
+}
+
+/* Adjust transition timing */
+.carousel {
+  transition: 0.5s ease-in-out; /* Smooth and consistent transition for carousel */
+}
+
+/* -------------------------------- Testimonials Section Styling -------------------------------- */
+.testimonials {
+  height: 18rem;
+  margin-bottom: 5rem;
+}
+
+#testimonialsCarousel a {
+  height: 18rem;
+}
+
+#feedback-title {
+  color: rgb(243, 152, 199);
+  margin-top: 4rem;
+  font-size: 2.5rem;
+}
+
+/* -------------------------------- Menu Page -------------------------------- */
+
+.category-link {
+  font-size: 1.3em; 
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#categeorylinks{
+  margin-bottom: 2rem;
+}
+.category-link:hover,
+.category-link.active {
+    background-color: rgb(255, 157, 157); /* Your theme pink color */
+    color: white;
+    text-decoration: none;
+}
+
+.category-icon {
+  margin-right: 5px;
+  font-size: 1.2em; /* Bigger icon */
+}
+
+.product-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.image-container {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+
+/* Product Card Image Modal Styles */
+
+
+/* shop */
+
+
+#shop-card {
+  transition: all 0.3s ease;
+}
+
+#shop-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#productsGrid {
+  margin-top: 1rem;
+}
+
+.add-to-cart {
+  width: 100%;
+  font-size: 1rem;
+}
+/* Make filters larger */
+.filter-large {
+  font-size: 1.1rem;
+  padding: .5rem 1rem;
+}
+
+/* Styles for card footer */
+.card-footer {
+  background: rgb(176, 175, 175); /* Make sure the background matches the card */
+}
+.card-footer p {
+  font-size: 1.5rem; /* Adjust as needed */
+  color: white; /* Adjust as needed */
+}
+
+.card-footer button {
+  width: 60%;
+  height: auto;
+}
+
+.card-body{
+  margin-bottom: -1rem;
+  
+}
+
+/* Cart Page Styles */
+.cart-item {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+#cart-row-items{
+  border-color: #343a40;
+  border-style:double;
+  overflow: hidden;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+#cart-row-items img{
+  width: 100%; /* Adjust size as needed */
+  border-radius: 0;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/*Cart Items*/
+#cart-image-column{
+  height: 5rem;
+  width: 2rem ;
+  padding: .5rem;
+}
+
+#cart-product-name{
+
+  margin-left: 2rem;
+  
+}
+
+#cart-item-price{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center;
+  margin-top:1rem;
+  font-size: 1.2rem;
+}
+
+#cart-remove-btn button{
+  padding: 0.5rem;
+  width: 6rem;
+  background-color: pink;
+  margin-left: 3rem;
+  border-radius: 30%;
+}
+.cart-item h5 {
+  font-size: 1.2rem;
+}
+
+#cart-buttons{
+  margin-top: 5rem;
+}
+
+.empty-cart-image {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centers the image */
+  border-color: white;
+  border-width: thick;
+  
+}
+
+.empty-cart-message {
+  color: #ff0099; /* Pink text color, adjust as needed */
+  margin-top: 20px;
+  font-size: 2rem;
+  margin-bottom: -0.3rem;
+  text-align: center;
+}
+
+.empty-cart-message2 {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+/*Quantity Selectors*/
+
+#quantity-selector-minus{
+  margin-right: 0.8rem;
+}
+
+#quantity-selector-plus{
+  margin-left: 0.8rem;
+}
+
+
+/* Order Summary Styles */
+.order-summary {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+}
+#ordersummary{
+  font-size: 1.3rem;
+  margin-top: 0.7rem;
+  margin-bottom: 5rem;
+  
+}
+
+#ordersummary p {
+  margin: 0 30px; /* Adjust spacing as needed */
+  white-space: nowrap; /* Keeps the text from wrapping */
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+
+/* Checkout and Clear Cart Buttons */
+#checkoutButton{
+  width: 15rem;
+  margin-right: 2rem;
+  font-size: 1.3rem;
+  background-color: pink;
+  border-radius: 10%;
+}
+
+#clearcartbtn{
+  width: 15rem;
+  font-size: 1.3rem;
+  border-radius: 10%;
+}
+/* Layout Adjustments */
+@media (min-width: 768px) {
+  .cart-item img {
+    max-width: 150px; /* Larger size on desktop */
+  }
+}

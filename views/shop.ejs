@@ -1,0 +1,45 @@
+<%- include('partials/header.ejs') %>
+
+<main class="container mt-3">
+    <div class="row mb-4 left">
+        
+        <div class="col-auto">
+            <!-- Category Filter -->
+            <select id="categoryFilter" class="form-select filter-large" onchange="filterCategory()">
+                <option value="All">All</option>
+                <option value="Cake">Cakes</option>
+                <option value="Brownies">Brownies</option>
+                <option value="Cookies">Cookies</option>
+                <option value="Cupcakes">Cupcakes</option>
+            </select>
+        </div>
+        <div class="col-auto">
+            <!-- Sort Filter -->
+            <select id="sortFilter" class="form-select filter-large" onchange="sortProducts()">
+                <option value="Default">Default</option> 
+                <option value="LowToHigh">Low to High</option>
+                <option value="HighToLow">High to Low</option>
+                <option value="Relevance">Relevance</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="row" id="productsContainer">
+        <% products.forEach(product => { %>
+            <div class="col-md-4 mb-4" data-category="<%= product.Type %>" data-price="<%= product.Cost %>" data-relevance="<%= product.Relevance %>">
+                <div class="card h-100" id="shop-card">
+                    <img src="/assets/images/<%= product.Name.toLowerCase() %>.jpg" class="card-img-top" alt="<%= product.Name %>">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= product.Name %> Design</h5>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <p class="mb-0">$<%= product.Cost.toFixed(2) %></p>
+                        <button class="btn btn-primary" onclick="addToCart('<%= product._id %>')">+ Add</button>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</main>
+
+<%- include('partials/footer.ejs') %>

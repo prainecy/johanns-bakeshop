@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel='stylesheet' href='/Content/app.css' />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="/Scripts/app.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="/">
+                <img src="/assets/images/logo.png" alt="Johann's Bakeshop">
+            </a>
+
+            <!-- Toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar content -->
+            <div class="collapse navbar-collapse" id="navMenu">
+                <!-- Navigation tabs centered -->
+                <div class="navcontent-container">
+                    <ul class="navbar-nav">
+                        <li class="nav-item <% if (title === 'About Us') { %>active<% } %>">
+                            <a class="nav-link" href="/about">About Us</a>
+                        </li>
+                        <li class="nav-item <% if (title === 'Menu') { %>active<% } %>">
+                            <a class="nav-link" href="/menu">Menu</a>
+                        </li>
+                        <li class="nav-item <% if (title === 'Shop') { %>active<% } %>">
+                            <a class="nav-link" href="/shop">Shop</a>
+                        </li>
+                        <li class="nav-item <% if (title === 'Resellers') { %>active<% } %>">
+                            <a class="nav-link" href="/reseller">Resellers</a>
+                        </li>
+                        <li class="nav-item <% if (title === 'Contact Us') { %>active<% } %>">
+                            <a class="nav-link" href="/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Icons on the right -->
+                <div class="icon-container">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="<% if (!isLoggedIn) { %>/login<% } else { %>/cart<% } %>"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.facebook.com/johannsweetcreations"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.tiktok.com/@johannsbakeshop"><i class="fab fa-tiktok"></i></a>
+                        </li>
+
+                        <% if (!isLoggedIn) { %>
+                            <!-- If user is not logged in, show user icon to go to login page -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login"><i class="fas fa-user"></i></a>
+                            </li>
+                        <% } else { %>
+                            <!-- If user is logged in, show logout icon -->
+                            <li class="nav-item">
+                                <a class="nav-link" id="logoutLink" href="#"><i class="fas fa-sign-out-alt"></i></a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Logout Confirmation Modal -->
+        <div class="modal" id="logoutModal">
+          <div class="modal-dialog" id="logout-modal">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">Log Out</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      Are you sure you want to log out?
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                      <button type="button" class="btn btn-primary" id="confirmLogout">Yes</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
